@@ -53,11 +53,11 @@ add_shortcode('ce_courses', 'xd_ce_courses_shortcode');
 function xd_ce_subtitle_meta_box(): void {
     add_meta_box(
         'xd_ce_subtitle',
-        'Post Subtitle (API Key)',
+        'Post Subtitle (Program Name)',
         'xd_ce_subtitle_callback',
         'post',
-        'normal',
-        'high'
+        'side',
+        'default'
     );
 }
 
@@ -65,10 +65,10 @@ function xd_ce_subtitle_callback(WP_Post $post): void {
     $subtitle = get_post_meta($post->ID, '_xd_ce_subtitle', true);
     wp_nonce_field('xd_ce_save_subtitle', 'xd_ce_subtitle_nonce');
     echo <<<HTML
-    <label for="xd_ce_subtitle">Subtitle:</label>
+    <label for="xd_ce_subtitle">Subtitle (Program Name):</label>
     <input type="text" id="xd_ce_subtitle" name="xd_ce_subtitle" 
-           value="{$subtitle}" style="width:100%">
-    <p><small>Used for API requests when populated</small></p>
+           value="{esc_attr($subtitle)}" style="width:100%">
+    <p><small>Used for API requests when populated if Program Name is deffirent from this Post title.</small></p>
     HTML;
 }
 
