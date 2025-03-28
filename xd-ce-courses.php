@@ -60,6 +60,7 @@ function xd_ce_subtitle_meta_box(): void {
         'default'
     );
 }
+add_action('add_meta_boxes', 'xd_ce_subtitle_meta_box');
 
 function xd_ce_move_meta_box() {
     global $wp_meta_boxes;
@@ -83,15 +84,15 @@ function xd_ce_move_meta_box() {
 }
 add_action('add_meta_boxes', 'xd_ce_move_meta_box', 99);
 
+// Meta Box Callback
 function xd_ce_subtitle_callback(WP_Post $post): void {
     $subtitle = get_post_meta($post->ID, '_xd_ce_subtitle', true);
     wp_nonce_field('xd_ce_save_subtitle', 'xd_ce_subtitle_nonce');
-    echo <<<HTML
-    <label for="xd_ce_subtitle">Subtitle (Program Name):</label>
-    <input type="text" id="xd_ce_subtitle" name="xd_ce_subtitle" 
-           value="{esc_attr($subtitle)}" style="width:100%">
-    <p><small>Used for API requests when populated if Program Name is deffirent from this Post title.</small></p>
-    HTML;
+    
+    echo '<label for="xd_ce_subtitle">Subtitle (Program Name):</label>';
+    echo '<input type="text" id="xd_ce_subtitle" name="xd_ce_subtitle" 
+           value="' . esc_attr($subtitle) . '" style="width:100%">';
+    echo '<p><small>Used for API requests when populated if Program Name is different from this Post title.</small></p>';
 }
 
 function xd_ce_save_subtitle(int $post_id): void {
