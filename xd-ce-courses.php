@@ -61,6 +61,28 @@ function xd_ce_subtitle_meta_box(): void {
     );
 }
 
+function xd_ce_move_meta_box() {
+    global $wp_meta_boxes;
+    
+    // Get our meta box
+    $subtitle_box = $wp_meta_boxes['post']['side']['default']['xd_ce_subtitle'];
+    
+    // Remove it temporarily
+    unset($wp_meta_boxes['post']['side']['default']['xd_ce_subtitle']);
+    
+    // Re-add it after categories (priority 40)
+    add_meta_box(
+        'xd_ce_subtitle',
+        $subtitle_box['title'],
+        $subtitle_box['callback'],
+        'post',
+        'side',
+        'default',
+        $subtitle_box['args']
+    );
+}
+add_action('add_meta_boxes', 'xd_ce_move_meta_box', 99);
+
 function xd_ce_subtitle_callback(WP_Post $post): void {
     $subtitle = get_post_meta($post->ID, '_xd_ce_subtitle', true);
     wp_nonce_field('xd_ce_save_subtitle', 'xd_ce_subtitle_nonce');
