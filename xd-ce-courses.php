@@ -10,7 +10,7 @@
  * @wordpress-plugin
  * Plugin Name:   XD CE Courses v.3
  * Plugin URI:    https://github.com/millaw/xd-ce-courses-v3
- * Description:   This plugin integrates with the Xenegrade/Xendirect API to display continuing education course offerings, specifically tailored for CUNY colleges and other educational institutions utilizing their platform. Use a Subtitle as an KEY (when the Post name and Program Name are different) to display the course. Use shortcode [ce_courses] to display courses.
+ * Description:   This plugin integrates with the Xenegrade/Xendirect API to display continuing education course offerings, specifically tailored for CUNY colleges and other educational institutions using the platform. Use the Subtitle as a key when the post title and program name differ to display the course. Use the shortcode [ce_courses] to display courses.
  * Version:       3.1.0
  * Author:        Milla Wynn
  * Author URI:    https://github.com/millaw
