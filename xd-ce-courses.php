@@ -4,7 +4,7 @@
  *
  * @package       XDCECOURSE
  * @author        Milla Wynn
- * @license       gplv2
+ * @license       gplv3
  * @version       3.1.0
  *
  * @wordpress-plugin
@@ -16,8 +16,8 @@
  * Author URI:    https://github.com/millaw
  * Text Domain:   xd-ce-courses
  * Domain Path:   /languages
- * License:       GPLv2
- * License URI:   https://www.gnu.org/licenses/gpl-2.0.html
+ * License:       GPLv3
+ * License URI:   https://www.gnu.org/licenses/gpl-3.0.html
  *
  * You should have received a copy of the GNU General Public License
  * along with XD CE Courses. If not, see <https://www.gnu.org/licenses/gpl-2.0.html/>.
