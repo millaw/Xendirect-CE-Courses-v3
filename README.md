@@ -1,9 +1,5 @@
 # XD CE Courses WordPress Plugin
 
-![WordPress Plugin Version](https://img.shields.io/wordpress/plugin/v/xd-ce-courses?style=flat-square)
-![PHP Version](https://img.shields.io/badge/PHP-7.2%2B-blue?style=flat-square)
-![License](https://img.shields.io/badge/license-GPLv2-blue.svg?style=flat-square)
-
 This WordPress plugin integrates with the Xenegrade/Xendirect API to display continuing education course offerings, specifically tailored for CUNY colleges and other educational institutions utilizing their platform.
 
 ## ✨ Features
