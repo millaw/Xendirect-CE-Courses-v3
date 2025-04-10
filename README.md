@@ -4,7 +4,7 @@
 ![PHP Version](https://img.shields.io/badge/PHP-7.2%2B-blue?style=flat-square)
 ![License](https://img.shields.io/badge/license-GPLv2-blue.svg?style=flat-square)
 
-This plugin integrates with the Xenegrade/Xendirect API to display continuing education course offerings, specifically tailored for CUNY colleges and other educational institutions utilizing their platform.
+This WordPress plugin integrates with the Xenegrade/Xendirect API to display continuing education course offerings, specifically tailored for CUNY colleges and other educational institutions utilizing their platform.
 
 ## ✨ Features
 
